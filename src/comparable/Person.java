@@ -4,6 +4,11 @@ public class Person implements Comparable<Person> {
 	String name;
 	int age;
 
+	public Person(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -18,6 +23,13 @@ public class Person implements Comparable<Person> {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+	
+	@Override
+	public String toString(){
+		StringBuilder sbBuilder = new StringBuilder();
+		sbBuilder.append("name : " + name + "\tage = " + age);
+		return sbBuilder.toString();
 	}
 
 	@Override
